@@ -10,7 +10,7 @@ def seed_comments():
     comment2 = Comment(
        user_id=2,
        post_id=9,
-       comment='You should get sponsered by Vans. Sweet.'
+       comment='You should get sponsored by Vans. Sweet.'
     )
 
     comment3 = Comment(
