@@ -14,8 +14,8 @@ class Post(db.model):
     photo = db.Column(db.String(255), nullable=False, unique=True)
     title = db.Column(db.String(50), nullable=False)
     location = db.Column(db.String(50), nullable=False)
-    description = db.Column(db.String(255), nullable=False, unique=True)
-    tips = db.Column(db.String(255), nullable=True, unique=True)
+    description = db.Column(db.String(255), nullable=True)
+    tips = db.Column(db.String(255), nullable=True)
 
     created_at = db.Column(db.DateTime(), nullable=False, server_default=func.now())
     updated_at = db.Column(db.DateTime(), nullable=False, onupdate=func.now(), default=func.now())
