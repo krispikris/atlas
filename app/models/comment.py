@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import func
 from sqlalchemy import ForeignKey
 
-class Comment(db.model):
+class Comment(db.Model):
     __tablename__ = 'comments'
 
     if environment == "production":

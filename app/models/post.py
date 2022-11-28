@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import func
 from sqlalchemy import ForeignKey
 
-class Post(db.model):
+class Post(db.Model):
     __tablename__ = 'posts'
 
     if environment == "production":
@@ -22,7 +22,7 @@ class Post(db.model):
 
     #relationships
     users = db.relationship("User", back_populates="posts")
-    # post_comment = db.relationship("Comment", cascade="all, delete", backref="posts")
+    comments = db.relationship("Comment", back_populates="posts")
 
 
     def to_dict(self):
