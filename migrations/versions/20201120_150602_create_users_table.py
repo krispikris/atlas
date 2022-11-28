@@ -54,8 +54,8 @@ def upgrade():
     sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
 
-    sa.ForeignKeyConstraint(['user_id', 'users.id']),
     sa.PrimaryKeyConstraint('id'),
+    sa.ForeignKeyConstraint(['user_id', 'users.id']),
     sa.UniqueConstraint('photo')
     )
 
